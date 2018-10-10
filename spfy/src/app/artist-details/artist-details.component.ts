@@ -16,13 +16,12 @@ export class ArtistDetailsComponent implements OnInit {
       .then(details => {
         this.artist = details;
         console.log(details);
-    }).catch(err => console.log(err));
-
-      this.spotifyService.getArtistAlbums()
-      .then(albums => {
-        this.albums = albums;
-        console.log(this.albums);
-      }).catch(err => console.log('[Api error]', err));
+        return this.spotifyService.getArtistAlbums();
+    }).then(albums => {
+      this.albums = albums.items;
+      console.log(this.albums);
+    })
+    .catch(err => console.log(err));
   }
 
 }
