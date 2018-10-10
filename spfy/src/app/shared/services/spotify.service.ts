@@ -10,6 +10,7 @@ export class SpotifyService {
   private  spotifyApiUrl = environment.spotifyApiUrl;
   private token = environment.token;
   constructor( private httpClient: HttpClient) { }
+  // todo: refactor
   private params = new HttpHeaders()
   .set('Accept', 'application/json')
   .set('Content-Type', 'application/json')
@@ -22,6 +23,11 @@ export class SpotifyService {
 
   getTop(type: string): Promise<any> {
     return this.httpClient.get(`${this.spotifyApiUrl}/me/top/${type}`, {headers: this.params})
+      .toPromise();
+  }
+
+  getArtistDetails(id: string = '13wFTN72PGSUxzEHJP5Ljs'): Promise<any> {
+    return this.httpClient.get(`${this.spotifyApiUrl}/artists/${id}`, {headers: this.params})
       .toPromise();
   }
 }
