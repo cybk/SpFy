@@ -10,13 +10,18 @@ export class SpotifyService {
   private  spotifyApiUrl = environment.spotifyApiUrl;
   private token = environment.token;
   constructor( private httpClient: HttpClient) { }
+  private params = new HttpHeaders()
+  .set('Accept', 'application/json')
+  .set('Content-Type', 'application/json')
+  .set('Authorization', this.token);
 
   getCurrentUser(): Promise<any> {
-    const params = new HttpHeaders()
-      .set('Accept', 'application/json')
-      .set('Content-Type', 'application/json')
-      .set('Authorization', this.token);
-    return this.httpClient.get(`${this.spotifyApiUrl}/me`, {headers: params})
+    return this.httpClient.get(`${this.spotifyApiUrl}/me`, {headers: this.params})
+      .toPromise();
+  }
+
+  getTop(type: string): Promise<any> {
+    return this.httpClient.get(`${this.spotifyApiUrl}/me/top/${type}`, {headers: this.params})
       .toPromise();
   }
 }
