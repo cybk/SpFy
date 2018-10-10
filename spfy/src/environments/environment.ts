@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  token: 'Bearer AQB3gvxwF96NFlWsR9i9E4fVnWs64naRuhGhemdIv__FDuiw61q9HDqPqfby1IZMO6qItP76LpzGfNN-SyiAUePKRbrDYMbnwR6wgx6x0Makklfx7OtwdpMiLVjnhdRloZz8DB5B8KhvxEGUJF83dw-DVbxQ4310Gpb6kMxA_Yc2OF2p_NGxfWsV0c3yGxqL-NKYv5840A',
-  spotifyApiUrl: 'https://api.spotify.com/v1/'
+  token: 'Bearer BQCEQN1WbhhpeWvK3ixoiqR95BOKXWtxXzhWfmTHwq9VbdOcEec6Gkzu26kFEzT4gwSdZCmyGKoGFX9Vqvz5_Zfi7hlfrCbAQ7E-GTeNIY7nSdcQFNqLvNmxmRFYlh47-027_-rmwXq4MnI844J6t_kFu-e1myzbvQ',
+  spotifyApiUrl: 'https://api.spotify.com/v1'
 };
 
 /*

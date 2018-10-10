@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { environment } from './../../../environments/environment.prod';
 
@@ -11,8 +11,12 @@ export class SpotifyService {
   private token = environment.token;
   constructor( private httpClient: HttpClient) { }
 
-  getCurrentUser() {
-    this.httpClient.get(`${this.spotifyApiUrl}/me`)
+  getCurrentUser(): Promise<any> {
+    const params = new HttpHeaders()
+      .set('Accept', 'application/json')
+      .set('Content-Type', 'application/json')
+      .set('Authorization', this.token);
+    return this.httpClient.get(`${this.spotifyApiUrl}/me`, {headers: params})
       .toPromise();
   }
 }
