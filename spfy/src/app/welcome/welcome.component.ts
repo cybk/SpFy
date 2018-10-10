@@ -8,14 +8,14 @@ import { SpotifyService } from './../shared/services/spotify.service';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  private top: any;
+  public topItems: Array<any>;
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit() {
     this.spotifyService.getTop('artists')
         .then(top => {
           console.log(top);
-          this.top = top;
+          this.topItems = top.items;
         })
         .catch(err => console.log(err));
   }

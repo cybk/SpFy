@@ -1,3 +1,9 @@
 <div>
   <h1>Welcome</h1>
+  <div class="top-artists-wrapper">
+    <div class="top-artist" *ngFor="let artist of topItems">
+      <p>{{artist.name}}</p>
+      <img [src]="artist.images[2].url" [alt]="artist.name">
+    </div>
+  </div>
 </div>

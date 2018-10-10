@@ -8,14 +8,14 @@ import { SpotifyService } from './../shared/services/spotify.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  private userData: any = {};
+  public me: any = {};
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit() {
     this.spotifyService.getCurrentUser()
       .then(data => {
-        this.userData = data;
-        console.log(this.userData);
+        this.me = data;
+        console.log(this.me);
       })
       .catch(err => console.log(err));
   }
