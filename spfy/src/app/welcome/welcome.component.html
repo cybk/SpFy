@@ -1,9 +1,14 @@
 <div>
   <h1>Welcome</h1>
+  <div class="search-wrapper">
+    <input type="text" placeholder="Search artists name" class="search"/>
+  </div>
   <div class="top-artists-wrapper">
+    <h2>My top artists</h2>
     <div class="top-artist" *ngFor="let artist of topItems">
-      <p>{{artist.name}}</p>
       <img [src]="artist.images[2].url" [alt]="artist.name">
+      <p>{{artist.name}}</p>
+      <p>Popularity: {{artist.popularity}}</p>
     </div>
   </div>
 </div>
