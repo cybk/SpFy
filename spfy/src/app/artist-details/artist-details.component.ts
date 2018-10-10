@@ -8,6 +8,7 @@ import { SpotifyService } from './../shared/services/spotify.service';
 })
 export class ArtistDetailsComponent implements OnInit {
   public artist: any = {};
+  public albums: Array<any>;
   constructor( private spotifyService: SpotifyService) { }
 
   ngOnInit() {
@@ -15,7 +16,13 @@ export class ArtistDetailsComponent implements OnInit {
       .then(details => {
         this.artist = details;
         console.log(details);
-      }).catch(err => console.log(err));
+    }).catch(err => console.log(err));
+
+      this.spotifyService.getArtistAlbums()
+      .then(albums => {
+        this.albums = albums;
+        console.log(this.albums);
+      }).catch(err => console.log('[Api error]', err));
   }
 
 }
