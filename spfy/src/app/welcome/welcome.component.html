@@ -4,7 +4,7 @@
     <input type="text" placeholder="Search artists name" class="search"/>
   </div>
   <div class="top-artists-wrapper">
-    <h2>My top artists</h2>
-      <app-card *ngFor="let artist of topItems" [artist]="artist"></app-card>
+      <app-card-holder title="My top artist" [items] = "topItems">
+      </app-card-holder>
   </div>
 </div>

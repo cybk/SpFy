@@ -10,6 +10,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { router } from './app.routing';
 import { CardComponent } from './shared/card/card.component';
+import { CardHolderComponent } from './shared/card-holder/card-holder.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CardComponent } from './shared/card/card.component';
     HeaderComponent,
     WelcomeComponent,
     ArtistDetailsComponent,
-    CardComponent
+    CardComponent,
+    CardHolderComponent
   ],
   imports: [
     BrowserModule,
