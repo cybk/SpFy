@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  token: 'Bearer BQAkn4aFALCOPS09bNQsfiF5Gw_mEFadfXiGr2VzMWw_H7Ebvd-U4gWezL3jzoMhIPKWvMzHP2Kg62Y98itoHQr3CTS0bFzuCFwNdTs4O12GeOTOU20nxAMJewxpCGQVLcNaxBbC3T-mAxGZk8lG051e4ajYPT_cB6-tHS9aEq5dzzn_3w',
+  token: 'Bearer BQAeqOalKkEBoyqBS9humcDExdJv-n8XD3OPuoGjUTcMuqR2bGeJ5uHydzgPsDPGMC-u_J6LXjWStXAQ9iEgqOyzILiAsjXy8AgQQavf0gj2gKmJVzeVHMEuhxo1johLycVDNXoUEk42jbuoRth9M2reqxsDDR-h8_yZCtwr0jtdumaC8g',
   spotifyApiUrl: 'https://api.spotify.com/v1'
 };
 

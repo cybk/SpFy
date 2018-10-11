@@ -11,6 +11,7 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
 import { router } from './app.routing';
 import { CardComponent } from './shared/card/card.component';
 import { CardHolderComponent } from './shared/card-holder/card-holder.component';
+import { PopularityDirective } from './shared/directives/popularity.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardHolderComponent } from './shared/card-holder/card-holder.component'
     WelcomeComponent,
     ArtistDetailsComponent,
     CardComponent,
-    CardHolderComponent
+    CardHolderComponent,
+    PopularityDirective
   ],
   imports: [
     BrowserModule,

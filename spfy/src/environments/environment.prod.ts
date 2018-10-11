@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  token: 'Bearer BQAkn4aFALCOPS09bNQsfiF5Gw_mEFadfXiGr2VzMWw_H7Ebvd-U4gWezL3jzoMhIPKWvMzHP2Kg62Y98itoHQr3CTS0bFzuCFwNdTs4O12GeOTOU20nxAMJewxpCGQVLcNaxBbC3T-mAxGZk8lG051e4ajYPT_cB6-tHS9aEq5dzzn_3w',
+  token: 'Bearer BQABAZrL3NtFPi_CUB5lUkE6AdxyZ_Xky_ZOvoun3gJF6JMIFQELhcHJn-UDzOhkJEOWy1lW050Xz4vRr8r6LOiCIdhu5x1gzOeyYQDpOH81zWcxih_YltJraXixX03HQexNeUy0v8t0nDRxJWG_XXdNJ2YtFTISjg9KgDNUj-xoU50ZIQ',
   spotifyApiUrl: 'https://api.spotify.com/v1'
 };

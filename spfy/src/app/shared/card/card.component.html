@@ -1,7 +1,14 @@
 <div class="card-wrapper">
-    <a [routerLink]="canNavigate ? ['/artist/',artist.id]:false">
-      <img [src]="artist.images[artist.images.length-1].url" [alt]="artist.name">
+    <a [routerLink]="canNavigate ? ['/artist/',item.id]:false">
+      <img [src]="item.images[item.images.length-1].url" [alt]="item.name">
     </a>
-    <p>{{artist.name}}</p>
-    <p>Popularity: {{artist.popularity}}</p>
+    <p>{{item.name}}</p>
+    <div class="progress-bar" *ngIf="item.popularity">
+      <div class="progress" [ngClass]="item.popularity > 80 ? 'popularity-high' : ''" [style.width]="item.popularity+'%'">
+
+      </div>
+    </div>
+    <a target="_blank" *ngIf="item.external_urls.spotify" href="{{item.external_urls.spotify}}">
+      Open in Spotify
+    </a>
 </div>

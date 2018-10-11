@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() artist: any = {};
+  @Input() item: any = {};
   @Input() canNavigate: boolean;
   constructor() {
   }
@@ -15,4 +15,9 @@ export class CardComponent implements OnInit {
     this.canNavigate = this.canNavigate !== false;
   }
 
+  setClassPopularity(): string {
+    if (this.item.popularity > 10) {
+      return 'some';
+    }
+  }
 }
