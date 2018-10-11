@@ -4,12 +4,12 @@
     <input type="text" placeholder="Search artists name" class="search"/>
   </div>
   <div class="top-artists-wrapper">
-      <app-card-holder title="My top artist" [items] = "topItems">
+      <app-card-holder title="My top artist" [items] = "topItems" [canNavigate]="true">
       </app-card-holder>
   </div>
 
   <div class="top-artists-wrapper">
-      <app-card-holder title="My playlists" [items] = "playlists">
+      <app-card-holder title="My playlists" [items] = "playlists" [canNavigate]="false">
       </app-card-holder>
   </div>
 </div>

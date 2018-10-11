@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardHolderComponent implements OnInit {
   @Input() title: any = '';
   @Input() items: Array<any>;
+  @Input() canNavigate: boolean;
   constructor() { }
 
   ngOnInit() {

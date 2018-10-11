@@ -1,5 +1,5 @@
 <div class="card-wrapper">
-    <a [routerLink]="['/artist/',artist.id]">
+    <a [routerLink]="canNavigate ? ['/artist/',artist.id]:false">
       <img [src]="artist.images[artist.images.length-1].url" [alt]="artist.name">
     </a>
     <p>{{artist.name}}</p>
