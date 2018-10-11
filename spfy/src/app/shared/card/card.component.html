@@ -1,0 +1,7 @@
+<div class="card-wrapper">
+    <a [routerLink]="['/artist/',artist.id]">
+      <img [src]="artist.images[2].url" [alt]="artist.name">
+    </a>
+    <p>{{artist.name}}</p>
+    <p>Popularity: {{artist.popularity}}</p>
+</div>

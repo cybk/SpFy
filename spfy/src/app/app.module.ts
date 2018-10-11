@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { router } from './app.routing';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     WelcomeComponent,
-    ArtistDetailsComponent
+    ArtistDetailsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

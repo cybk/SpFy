@@ -5,12 +5,6 @@
   </div>
   <div class="top-artists-wrapper">
     <h2>My top artists</h2>
-    <div class="top-artist"  *ngFor="let artist of topItems">
-      <a routerLink="/artist/{{artist.id}}">
-        <img [src]="artist.images[2].url" [alt]="artist.name">
-      </a>
-      <p>{{artist.name}}</p>
-      <p>Popularity: {{artist.popularity}}</p>
-    </div>
+      <app-card *ngFor="let artist of topItems" [artist]="artist"></app-card>
   </div>
 </div>
