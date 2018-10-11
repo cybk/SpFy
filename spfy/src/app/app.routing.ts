@@ -5,7 +5,7 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
-  { path: 'artist', component: ArtistDetailsComponent }
+  { path: 'artist/:id', component: ArtistDetailsComponent }
 ];
 
 export const router = RouterModule.forRoot(routes);

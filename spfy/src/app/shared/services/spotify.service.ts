@@ -26,12 +26,12 @@ export class SpotifyService {
       .toPromise();
   }
 
-  getArtistDetails(id: string = '13wFTN72PGSUxzEHJP5Ljs'): Promise<any> {
+  getArtistDetails(id): Promise<any> {
     return this.httpClient.get(`${this.spotifyApiUrl}/artists/${id}`, {headers: this.params})
       .toPromise();
   }
 
-  getArtistAlbums(id: string = '13wFTN72PGSUxzEHJP5Ljs'): Promise<any> {
+  getArtistAlbums(id): Promise<any> {
     return this.httpClient.get(`${this.spotifyApiUrl}/artists/${id}/albums`, {headers: this.params})
       .toPromise();
   }
