@@ -9,7 +9,9 @@ import { SpotifyService } from './../shared/services/spotify.service';
 export class ArtistDetailsComponent implements OnInit {
   public artist: any = {};
   public albums: Array<any>;
-  constructor( private spotifyService: SpotifyService) { }
+  constructor(
+    private spotifyService: SpotifyService
+    ) { }
 
   ngOnInit() {
     this.spotifyService.getArtistDetails()

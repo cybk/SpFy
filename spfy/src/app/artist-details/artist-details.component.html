@@ -1,9 +1,10 @@
+<div *ngIf="!artist.name">Loading...</div>
 <div class="wrapper" *ngIf="artist.name">
   <img class="artist-pic" [src]="artist.images[2].url" [alt]="artist.name">
   <p>{{artist.name}}</p>
   <p>Genres: {{artist.genres}}</p>
 </div>
-<div class="album-list">
+<div class="albums-list">
   <ul>
     <li *ngFor="let album of albums">
       <img [src]="album.images[2].url" [alt]="album.name">
