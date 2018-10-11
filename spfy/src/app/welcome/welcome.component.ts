@@ -10,22 +10,33 @@ import { SpotifyService } from './../shared/services/spotify.service';
 })
 export class WelcomeComponent implements OnInit {
   public topItems: Array<any>;
+  public playlists: Array<any>;
   constructor(
     private spotifyService: SpotifyService,
     private router: Router
     ) { }
 
   ngOnInit() {
-    this.spotifyService.getTop('artists')
-        .then(top => {
-          console.log(top);
-          this.topItems = top.items;
-        })
-        .catch(err => console.log(err));
+    this.getMyTopArtists();
+    this.getMyPlayLists();
   }
 
-  navigate(): void {
-    this.router.navigate(['/artist']);
+  getMyTopArtists(): void {
+    this.spotifyService.getTop('artists')
+    .then(top => {
+      console.log(top);
+      this.topItems = top.items;
+    })
+    .catch(err => console.log(err));
+  }
+
+  getMyPlayLists(): void {
+    this.spotifyService.getMyPlaylists()
+    .then(lists => {
+      this.playlists = lists.items;
+      console.log(this.playlists);
+    })
+    .catch(err => console.log(err));
   }
 
 }
