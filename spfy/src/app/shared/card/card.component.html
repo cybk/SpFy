@@ -3,8 +3,8 @@
       <img [src]="item.images[item.images.length-1].url" [alt]="item.name">
     </a>
     <p>{{item.name}}</p>
-    <div class="progress-bar" *ngIf="item.popularity">
-      <div class="progress" [ngClass]="item.popularity > 80 ? 'popularity-high' : ''" [style.width]="item.popularity+'%'">
+    <div class="progress-bar" >
+      <div class="progress" [appPopularity]="item.name" [style.width]="item.popularity+'%'">
 
       </div>
     </div>

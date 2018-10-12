@@ -1,10 +1,18 @@
-import { Directive } from '@angular/core';
+import { Directive, Input, AfterViewInit, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appPopularity]'
 })
-export class PopularityDirective {
+export class PopularityDirective implements AfterViewInit {
+  @Input() appPopularity: any;
+  constructor(
+    private el: ElementRef;
+  ) {}
 
-  constructor() { }
-
+  ngAfterViewInit(): void {
+    console.log(this.appPopularity);
+    if (this.appPopularity.includes('de')) {
+      this.el.nativeElement.className += ' popularity-high';
+    }
+  }
 }
