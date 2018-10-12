@@ -13,6 +13,8 @@ import { CardComponent } from './shared/card/card.component';
 import { CardHolderComponent } from './shared/card-holder/card-holder.component';
 import { PopularityDirective } from './shared/directives/popularity.directive';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { LoginComponent } from './login/login.component';
+import { TokenComponent } from './token/token.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     CardComponent,
     CardHolderComponent,
     PopularityDirective,
-    SearchResultsComponent
+    SearchResultsComponent,
+    LoginComponent,
+    TokenComponent
   ],
   imports: [
     BrowserModule,
