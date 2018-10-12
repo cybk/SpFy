@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-token',
@@ -6,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./token.component.scss']
 })
 export class TokenComponent implements OnInit {
-
-  constructor() { }
+  public code: string;
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.activatedRoute.queryParams.subscribe(q => {
+      this.code = q.code;
+      console.log(q.code);
+    });
+  }
 
   ngOnInit() {
   }

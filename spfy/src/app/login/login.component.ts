@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
 
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +8,8 @@ import { environment } from 'src/environments/environment.prod';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor() { }
+  constructor(  ) {
+  }
 
   ngOnInit() {
     const { client_id, client_secret, spotifyAccount, appUrl } = environment;
