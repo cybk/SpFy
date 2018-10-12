@@ -10,7 +10,6 @@ export class PopularityDirective implements AfterViewInit {
   ) {}
 
   ngAfterViewInit(): void {
-    console.log(this.appPopularity);
     if (this.appPopularity >= 70) {
       this.el.nativeElement.className += ' popularity-high';
     }

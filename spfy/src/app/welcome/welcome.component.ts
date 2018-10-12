@@ -40,7 +40,10 @@ export class WelcomeComponent implements OnInit {
   }
 
   onSearch(query: string): void {
-
+    this.spotifyService.searchArtist(query)
+      .then(artists => {
+        console.log(artists);
+      }).catch(err => console.log(err));
   }
 
 }

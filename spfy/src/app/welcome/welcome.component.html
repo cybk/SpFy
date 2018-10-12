@@ -1,7 +1,7 @@
 <div>
   <h1>Welcome</h1>
   <div class="search-wrapper">
-    <form (submit)="onSearch(search.value)">
+    <form (ngSubmit)="onSearch(search.value)" action="">
         <input #search type="text" placeholder="Search artists name" class="search"/>
         <button class="search-button" type="submit">Search</button>
     </form>
