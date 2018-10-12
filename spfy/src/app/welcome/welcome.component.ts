@@ -39,4 +39,8 @@ export class WelcomeComponent implements OnInit {
     .catch(err => console.log(err));
   }
 
+  onSearch(query: string): void {
+
+  }
+
 }

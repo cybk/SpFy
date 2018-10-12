@@ -1,7 +1,10 @@
 <div>
   <h1>Welcome</h1>
   <div class="search-wrapper">
-    <input type="text" placeholder="Search artists name" class="search"/>
+    <form (submit)="onSearch(search.value)">
+        <input #search type="text" placeholder="Search artists name" class="search"/>
+        <button class="search-button" type="submit">Search</button>
+    </form>
   </div>
   <div class="top-artists-wrapper">
       <app-card-holder title="My top artist" [items] = "topItems" [canNavigate]="true">
