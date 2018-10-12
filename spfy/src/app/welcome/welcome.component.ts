@@ -1,7 +1,9 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { SpotifyService } from './../shared/services/spotify.service';
+
 
 @Component({
   selector: 'app-welcome',
@@ -11,10 +13,14 @@ import { SpotifyService } from './../shared/services/spotify.service';
 export class WelcomeComponent implements OnInit {
   public topItems: Array<any>;
   public playlists: Array<any>;
+  mySearch: FormGroup;
   constructor(
     private spotifyService: SpotifyService,
-    private router: Router
-    ) { }
+    private router: Router,
+    private fb: FormBuilder
+    ) {
+      this.createForm();
+    }
 
   ngOnInit() {
     this.getMyTopArtists();
@@ -39,11 +45,15 @@ export class WelcomeComponent implements OnInit {
     .catch(err => console.log(err));
   }
 
-  onSearch(query: string): void {
-    this.spotifyService.searchArtist(query)
-      .then(artists => {
-        console.log(artists);
-      }).catch(err => console.log(err));
+  onSearch(): void {
+    console.log('qry', this.mySearch.value.search);
+    this.router.navigate(['/search'], {queryParams: {q: this.mySearch.value.search}} );
   }
 
+  createForm(): void {
+    this.mySearch = this.fb.group({
+      search: [null, Validators.required],
+      range: [null, [Validators.required]]
+    });
+  }
 }
