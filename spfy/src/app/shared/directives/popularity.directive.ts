@@ -6,12 +6,12 @@ import { Directive, Input, AfterViewInit, ElementRef } from '@angular/core';
 export class PopularityDirective implements AfterViewInit {
   @Input() appPopularity: any;
   constructor(
-    private el: ElementRef;
+    private el: ElementRef
   ) {}
 
   ngAfterViewInit(): void {
     console.log(this.appPopularity);
-    if (this.appPopularity.includes('de')) {
+    if (this.appPopularity >= 70) {
       this.el.nativeElement.className += ' popularity-high';
     }
   }

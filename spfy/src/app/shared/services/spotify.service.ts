@@ -40,4 +40,9 @@ export class SpotifyService {
     return this.httpClient.get(`${this.spotifyApiUrl}/me/playlists`, {headers: this.params})
       .toPromise();
   }
+
+  searchArtist(query: string, type: string= 'artist'): Promise<any> {
+    return this.httpClient.get(`${this.spotifyApiUrl}/search`, {headers: this.params})
+    .toPromise();
+  }
 }
