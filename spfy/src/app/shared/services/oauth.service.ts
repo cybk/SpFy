@@ -19,7 +19,7 @@ export class OauthService {
     return this.getToken() ? true : false;
   }
 
-  clearToken(): void{
+  clearToken(): void {
     localStorage.clear();
   }
 }
