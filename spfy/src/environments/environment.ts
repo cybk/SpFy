@@ -9,7 +9,7 @@ export const environment = {
   client_id: 'a80c4a8f406f4a64bb4b21dfe65c3fc8',
   client_secret: 'cf9a544224eb41a3a1f2391007e7ac82',
   spotifyAccount: 'https://accounts.spotify.com/',
-  appUrl: 'http://localhost:4200'
+  appUrl: 'http://localhost:4200/'
 };
 
 /*
